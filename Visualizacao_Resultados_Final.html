@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Visualização dos Resultados - Análise de Falhas</title>
+<style>
+:root{--navy:#1f4e78;--blue:#2f75b5;--light:#eef4f9;--text:#1f2937;--muted:#64748b;--border:#d9e2ec;--good:#e6f4ea;--bad:#fce8e6}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f8fb;color:var(--text)}
+main{max-width:1180px;margin:0 auto;padding:34px 24px 48px}.hero{background:linear-gradient(135deg,#173b5d,#2f75b5);color:#fff;border-radius:18px;padding:30px 34px;box-shadow:0 12px 32px rgba(31,78,120,.18)}
+h1{margin:0 0 8px;font-size:32px}.subtitle{margin:0;opacity:.9;font-size:15px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:22px 0}.card,.panel{background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:0 4px 14px rgba(15,23,42,.05)}.card{padding:18px}.label{color:var(--muted);font-size:13px}.value{font-size:29px;font-weight:700;color:var(--navy);margin-top:5px}.panel{padding:22px;margin-top:18px}h2{margin:0 0 16px;font-size:20px;color:var(--navy)}.bar-row{display:grid;grid-template-columns:210px 1fr 72px;align-items:center;gap:12px;margin:12px 0}.bar-label{font-size:14px}.track{height:18px;background:#edf2f7;border-radius:999px;overflow:hidden}.bar{height:100%;background:linear-gradient(90deg,#2f75b5,#5b9bd5);border-radius:999px}.count{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.note{color:var(--muted);font-size:12px;margin-top:14px}.badge{display:inline-block;background:var(--light);color:var(--navy);font-size:12px;font-weight:700;border-radius:999px;padding:5px 9px;margin-right:6px}.footer{color:var(--muted);font-size:12px;text-align:center;margin-top:28px}@media(max-width:850px){.grid,.two{grid-template-columns:1fr 1fr}.bar-row{grid-template-columns:150px 1fr 60px}}@media(max-width:560px){.grid,.two{grid-template-columns:1fr}.bar-row{grid-template-columns:120px 1fr 55px}h1{font-size:25px}}
+</style>
+</head>
+<body><main>
+<section class="hero"><h1>Análise de Falhas de Equipamentos Industriais</h1><p class="subtitle">Processo Seletivo - Analista de Dados | Resumo visual da base saneada e classificada</p></section>
+<section class="grid">
+<div class="card"><div class="label">Registros analisados</div><div class="value">10.000</div></div>
+<div class="card"><div class="label">Registros incorretos / tratados</div><div class="value">6.412</div></div>
+<div class="card"><div class="label">Registros duplicados</div><div class="value">882</div></div>
+<div class="card"><div class="label">Valores ausentes na saída final</div><div class="value">0</div></div>
+</section>
+<section class="panel"><h2>Distribuição final dos modos de falha</h2>
+<div class="bar-row"><div class="bar-label">VIB - Vibração</div><div class="track"><div class="bar" style="width:100%"></div></div><div class="count">3.425</div></div>
+<div class="bar-row"><div class="bar-label">FTF - Falha ao funcionar</div><div class="track"><div class="bar" style="width:64.7%"></div></div><div class="count">2.216</div></div>
+<div class="bar-row"><div class="bar-label">STD - Deficiência estrutural</div><div class="track"><div class="bar" style="width:54.9%"></div></div><div class="count">1.879</div></div>
+<div class="bar-row"><div class="bar-label">NOI - Ruído</div><div class="track"><div class="bar" style="width:36.7%"></div></div><div class="count">1.256</div></div>
+<div class="bar-row"><div class="bar-label">FTS - Falha ao partir</div><div class="track"><div class="bar" style="width:35.7%"></div></div><div class="count">1.224</div></div>
+</section>
+<section class="two">
+<div class="panel"><h2>Impacto da falha</h2>
+<div class="bar-row"><div class="bar-label">Degradação severa</div><div class="track"><div class="bar" style="width:100%"></div></div><div class="count">3.556</div></div>
+<div class="bar-row"><div class="bar-label">Equipamento funcional</div><div class="track"><div class="bar" style="width:98.5%"></div></div><div class="count">3.502</div></div>
+<div class="bar-row"><div class="bar-label">Perda da função requerida</div><div class="track"><div class="bar" style="width:82.7%"></div></div><div class="count">2.942</div></div>
+</div>
+<div class="panel"><h2>Tipos de erro identificados</h2>
+<div class="bar-row"><div class="bar-label">NENHUM</div><div class="track"><div class="bar" style="width:100%"></div></div><div class="count">3.588</div></div>
+<div class="bar-row"><div class="bar-label">CAMPO_VAZIO</div><div class="track"><div class="bar" style="width:65.0%"></div></div><div class="count">2.333</div></div>
+<div class="bar-row"><div class="bar-label">CLASSIFICACAO_INCORRETA</div><div class="track"><div class="bar" style="width:57.0%"></div></div><div class="count">2.045</div></div>
+<div class="bar-row"><div class="bar-label">DESCRICAO_AMBIGUA</div><div class="track"><div class="bar" style="width:32.1%"></div></div><div class="count">1.152</div></div>
+<div class="bar-row"><div class="bar-label">DUPLICADO</div><div class="track"><div class="bar" style="width:24.6%"></div></div><div class="count">882</div></div>
+</div>
+</section>
+<section class="panel"><h2>Indicadores de qualidade e metodologia</h2>
+<p><span class="badge">192 datas problemáticas</span><span class="badge">441 pares duplicados</span><span class="badge">10.000 IDs únicos</span><span class="badge">0 nulos na saída</span></p>
+<p>A análise combinou auditoria de qualidade, regras semânticas de alta confiança e fallback com TF-IDF + Regressão Logística para os casos não resolvidos diretamente pelas regras. A classificação de impacto foi conduzida de forma conservadora, priorizando evidências explícitas de perda funcional.</p>
+<p class="note">Observação: as classificações foram validadas quanto aos domínios permitidos e à consistência estrutural. Casos com descrição técnica insuficiente foram tratados com cautela e classificados conforme a estratégia documentada no relatório executivo.</p>
+</section>
+<div class="footer">Processo Seletivo - Analista de Dados | Análise de Falhas de Equipamentos Industriais</div>
+</main></body></html>
